@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/userInfo/" method="post">
+    <p>Name<input type="text" name="username"></p>
+    <p>Sex<input type="text" name="sex"></p>
+    <p>Email<input type="text" name="email"></p>
+    <p><input type="submit" name="submit"></p>
+</form>
+
+<hr>
+
+<h1>Data Show</h1>
+
+<table border="1px">
+    <tr>
+        <td>name</td>
+        <td>sex</td>
+        <td>email</td>
+    </tr>
+    {% for i in user_list %}
+    <tr>
+        <td>{{i.username}}</td>
+        <td>{{i.sex}}</td>
+        <td>{{i.email}}</td>
+    </tr>
+    {% endfor %}}
+</table>
+</body>
+</html>
